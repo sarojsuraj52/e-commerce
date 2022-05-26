@@ -1,15 +1,22 @@
 
 import './App.css';
-import Header from './component/Layout/Header';
-import Footer from './component/Layout/Footer';
+import Cart from './component/Cart/Cart';
 import Product from './component/Product';
+import {useState} from 'react'
 
 function App() {
+  const [CartShown,setCartShown] = useState(false)
+
+  const showCart=()=>{
+    setCartShown(true)
+  }
+  const hideCart=()=>{
+    setCartShown(false)
+  }
   return (
     <>
-      <Header />
-      <Product />
-      <Footer />
+      <Product onShow={showCart}/>
+      {CartShown && <Cart onHide={hideCart} />}
     </>
   );
 }

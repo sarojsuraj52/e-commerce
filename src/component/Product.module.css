@@ -33,7 +33,7 @@
 }
 .img-container img:hover{
     transform: scale(1.5);
-    -webkit-filter: brightness(120%);
+    filter: brightness(130%);
 }
 
 
@@ -48,7 +48,15 @@
 .add-cart-button{
     padding: 0.6rem 0.5rem;
     background-color: rgb(0, 167, 245);
-    border: 1px solid rgb(0, 167, 245);
+    border: 2px solid rgb(0, 167, 245);
     border-radius: 5px;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-cart-button:hover{
+    background-color: rgb(0, 149, 218);
+    border:2px solid  rgb(0, 149, 218);
 }
