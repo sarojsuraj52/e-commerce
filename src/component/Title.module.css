@@ -1,0 +1,13 @@
+.title{
+    width: 100%;
+    background: rgb(139, 139, 139);
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    margin: 3.2rem 0;
+    justify-content: center;
+}
+.title h1{
+    font-size: 80px;
+    color: white;
+}
