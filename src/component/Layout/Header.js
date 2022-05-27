@@ -1,7 +1,10 @@
 import classes from './Header.module.css'
-
+import {useContext} from 'react'
+import CartContextAPI from '../Store/CartContextAPI'
 
 function Header(props){
+    const ctx  = useContext(CartContextAPI)
+    const cartItem = ctx.items.length;
 
     return <div className={classes.header}>
         <div className={classes.menu}>
@@ -10,7 +13,7 @@ function Header(props){
             <div><h3>About</h3></div>
         </div>
         <div  className={classes.action}>
-            <a href='#cart' onClick={props.onShow}>Cart  <span>0</span></a>
+            <a href='#cart' onClick={props.onShow}>Cart  <span>{cartItem}</span></a>
         </div>
     </div>
 }

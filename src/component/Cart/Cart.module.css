@@ -9,7 +9,21 @@
     padding: 20px;
     z-index: 99;
     overflow:auto;
+    animation: slideleft 300ms ease-in-out;
 }
+
+@keyframes slideleft {
+    from {
+        opacity: 0;
+        transform: translateX(3rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+        
+      }
+}
+
 .cart::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }

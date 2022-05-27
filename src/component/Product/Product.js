@@ -1,45 +1,43 @@
-import Footer from "./Layout/Footer";
-import Header from "./Layout/Header";
+import Footer from "../Layout/Footer";
+import Header from "../Layout/Header";
 import classes from "./Product.module.css";
-import Title from "./Title";
+import Title from "../Title";
+import ProductItem from "./ProductItems/ProductItem";
 
 const productsArr = [
   {
+    id:1,
     title: "Colors",
     price: 100,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
   },
   {
+    id:2,
     title: "Black and white Colors",
     price: 50,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
   },
   {
+    id:3,
     title: "Yellow and Black Colors",
     price: 70,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
   },
   {
+    id:4,
     title: "Blue Color",
     price: 100,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
   },
 ];
 
-const productList = productsArr.map((item) => (
-  <div className={classes.product_item}>
-    <h2>{item.title}</h2>
-    <div className={classes["img-container"]}>
-      <img src={item.imageUrl} alt={item.title} />
-    </div>
-    <div className={classes["prop-details"]}>
-      <span>${item.price}</span>
-      <button type='button' className={classes['add-cart-button']}>ADD TO CART</button>
-    </div>
-  </div>
-));
-
 function Product(props) {
+
+  const productList = productsArr.map((item) => (
+    <ProductItem key={item.id} id={item.id} title={item.title}  price={item.price} imageUrl={item.imageUrl}/>
+  ));
+  
+
   return (
     <>
     <Header onShow={props.onShow}/>

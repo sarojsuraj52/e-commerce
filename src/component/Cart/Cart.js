@@ -1,46 +1,25 @@
 import classes from "./Cart.module.css";
-
-const cartElements = [
-    {
-        title: "Colors",
-        price: 100,
-        imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-        quantity: 2,
-    },
-    {
-        title: "Black and white Colors",
-        price: 50,
-        imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-        quantity: 3,
-    },
-    {
-        title: "Yellow and Black Colors",
-        price: 70,
-        imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-        quantity: 1,
-    },
-];
-
-const cartItems = cartElements.map((item) =>
-    <div className={classes['cart-row']}>
-        <span className={[classes["cart-item"], classes["cart-column"]].join(" ")}> 
-        <img src={item.imageUrl} alt={item.imageUrl} className={classes['cart-img']}/>
-        <span className={classes['item-title']}>{item.title}</span>
-        </span>
-        <span className={[classes["cart-price"], classes["cart-column"]].join(" ")}>${item.price}</span>
-        <span className={[classes["cart-quantity"], classes["cart-column"]].join(" ")}>
-            <input type='number' value={item.quantity} className={classes['cart-input']} />
-            <button className={classes['remove-btn']}>REMOVE</button>
-        </span>
-
-    </div>
-
-
-);
-
+import {useContext} from 'react'
+import CartContextAPI from "../Store/CartContextAPI";
 
 
 function Cart(props) {
+    
+    const ctx = useContext(CartContextAPI)
+    
+    const cartItems = ctx.items.map((item) =>
+        <div key={item.id} className={classes['cart-row']}>
+            <span className={[classes["cart-item"], classes["cart-column"]].join(" ")}> 
+            <img src={item.imageUrl} alt={item.imageUrl} className={classes['cart-img']}/>
+            <span className={classes['item-title']}>{item.title}</span>
+            </span>
+            <span className={[classes["cart-price"], classes["cart-column"]].join(" ")}>${item.price}</span>
+            <span className={[classes["cart-quantity"], classes["cart-column"]].join(" ")}>
+                <input type='number' value={item.quantity}  className={classes['cart-input']} readOnly/>
+                <button className={classes['remove-btn']}>REMOVE</button>
+            </span>
+        </div>
+    );
     return (
         <div className={classes.cart}>
             <h2 className={classes.heading}>CART</h2>
