@@ -12,12 +12,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 
 .product_item{
     margin: 30px;
 }
+
 .product_item h2{
     margin: 0.6rem 0;
 }

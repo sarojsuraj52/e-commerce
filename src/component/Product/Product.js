@@ -1,5 +1,3 @@
-import Footer from "../Layout/Footer";
-import Header from "../Layout/Header";
 import classes from "./Product.module.css";
 import Title from "../Title";
 import ProductItem from "./ProductItems/ProductItem";
@@ -40,13 +38,11 @@ function Product(props) {
 
   return (
     <>
-    <Header onShow={props.onShow}/>
       <Title />
       <div className={classes.product}>
         <h1>Music</h1>
         <div className={classes.product_list}>{productList}</div>
       </div>
-      <Footer />
     </>
   );
 }

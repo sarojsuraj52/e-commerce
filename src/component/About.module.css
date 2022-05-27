@@ -1,0 +1,19 @@
+.about{
+    margin-top: 1rem;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.about img{
+    float: left;
+    margin: 20px;
+}
+
+p{
+    margin: 30px;
+    word-spacing: 0.4rem;
+    color: grey;
+}

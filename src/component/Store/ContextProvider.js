@@ -18,7 +18,6 @@ const ContextProvider = (props)=>{
             dummyItem.push({...item,quantity})
         }
         setItems(dummyItem)
-
     }
     const removeItemHandler = (item)=>{
 
