@@ -1,8 +1,10 @@
 import classes from './Title.module.css'
 
-function Title(){
-    return <div className={classes.title}>
+function Title(props){
+    let classprop = `${classes.title} + ${props.className}`
+    return <div className={classprop}>
         <h1>The Generics</h1>
+        {props.children}
     </div>
 }
 

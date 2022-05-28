@@ -7,6 +7,7 @@ import ContextProvider from "./component/Store/ContextProvider";
 import About from "./component/About";
 import Header from "./component/Layout/Header";
 import Footer from "./component/Layout/Footer";
+import Home from "./component/Home";
 
 function App() {
   const [CartShown, setCartShown] = useState(false);
@@ -22,6 +23,9 @@ function App() {
       <ContextProvider>
         {CartShown && <Cart onHide={hideCart} />}
         <Header onShow={showCart}/>
+        <Route path="/home">
+          <Home  />
+        </Route>
         <Route path="/product">
           <Product onShow={showCart} />
         </Route>

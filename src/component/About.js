@@ -6,7 +6,7 @@ function About() {
     <div className={classes.about}>
       <Title />
       <h2>About</h2>
-      <div>
+      <div className={classes["about-container"]}>
         <img
           src="https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg?size=338&ext=jpg&ga=GA1.2.1941182799.1653667256"
           alt="about"

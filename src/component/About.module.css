@@ -1,5 +1,10 @@
 .about{
-    margin-top: 1rem;
+    width: 100%;
+}
+.about-container{
+    max-width:900px;
+    margin: 0 auto;
+    
 }
 
 .about h2{

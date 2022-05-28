@@ -1,0 +1,70 @@
+.tour{
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 20px 30px;
+}
+
+.tour h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+}
+
+.album-btn{
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    background: none;
+    border: 2px solid rgb(0, 167, 245);
+    color: white;
+
+}
+
+.play-btn{
+    display: block;
+    padding: 0.8rem 1.3rem;
+    margin-bottom: 2rem ;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    background: none;
+    border: 2px solid rgb(0, 167, 245);
+    color: rgb(0, 167, 245);
+    border-radius: 50%;
+}
+
+.tour-item{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 6px 8px;
+    align-items: center;
+    
+}
+.tour-date{
+    width: 10%;
+}
+.tour-place{
+    width: 20%;
+}
+.tour-place-prop{
+    width: 50%;
+}
+.buy-btn{
+    width: 20%;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(0, 167, 245);
+    border: 1px solid rgb(0, 167, 245);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

@@ -40,7 +40,7 @@ function Product(props) {
     <>
       <Title />
       <div className={classes.product}>
-        <h1>Music</h1>
+        <h2>Music</h2>
         <div className={classes.product_list}>{productList}</div>
       </div>
     </>
