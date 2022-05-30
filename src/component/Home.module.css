@@ -67,4 +67,10 @@
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    cursor: pointer;
+}
+.buy-btn:hover{
+    background: rgb(2, 146, 212);
+    border: 1px solid rgb(2, 146, 212);
+
 }

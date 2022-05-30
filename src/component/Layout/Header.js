@@ -11,7 +11,7 @@ function Header(props) {
     <div className={classes.header}>
       <ul className={classes.menu}>
         <li>
-          <NavLink activeClassName={classes.active} to="/Home">
+          <NavLink activeClassName={classes.active} exact to="/">
             Home
           </NavLink>
         </li>
@@ -23,6 +23,11 @@ function Header(props) {
         <li>
           <NavLink activeClassName={classes.active} to="/about">
             About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName={classes.active} to="/contact">
+            Contact Us
           </NavLink>
         </li>
       </ul>

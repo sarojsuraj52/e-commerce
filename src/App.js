@@ -8,6 +8,7 @@ import About from "./component/About";
 import Header from "./component/Layout/Header";
 import Footer from "./component/Layout/Footer";
 import Home from "./component/Home";
+import Contact from "./component/Contact";
 
 function App() {
   const [CartShown, setCartShown] = useState(false);
@@ -23,7 +24,7 @@ function App() {
       <ContextProvider>
         {CartShown && <Cart onHide={hideCart} />}
         <Header onShow={showCart}/>
-        <Route path="/home">
+        <Route exact path="/">
           <Home  />
         </Route>
         <Route path="/product">
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
         <Footer />
       </ContextProvider>
