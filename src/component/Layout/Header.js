@@ -1,11 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import classes from "./Header.module.css";
 import { useContext } from "react";
 import CartContextAPI from "../Store/CartContextAPI";
+import AuthContext from "../Store/auth-context";
 
 function Header(props) {
   const ctx = useContext(CartContextAPI);
+  const authctx = useContext(AuthContext)
   const cartItem = ctx.items.length;
+
+  const logoutHandler = ()=>{
+    authctx.logout()
+  }
 
   return (
     <div className={classes.header}>
@@ -16,8 +22,8 @@ function Header(props) {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName={classes.active} to="/product">
-            Product
+          <NavLink activeClassName={classes.active} to="/products">
+            Products
           </NavLink>
         </li>
         <li>
@@ -32,9 +38,11 @@ function Header(props) {
         </li>
       </ul>
       <div className={classes.action}>
-        <a href="#cart" onClick={props.onShow}>
+        {!authctx.isLoggedIn && <Link to='/login' className={classes.loginBtn}>Login</Link>}
+        {authctx.isLoggedIn && <a href='#logout' className={classes.loginBtn} onClick={logoutHandler}>Logout</a>}
+        {authctx.isLoggedIn && <a href="#cart" onClick={props.onShow}>
           Cart <span>{cartItem}</span>
-        </a>
+        </a>}
       </div>
     </div>
   );

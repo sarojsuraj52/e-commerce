@@ -1,0 +1,55 @@
+.form{
+    margin: 8rem 2rem;
+}
+.form h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+.form label{
+    margin:0.5rem 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form input{
+    height: 2rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.form input:focus{
+    border: 1px solid rgb(0, 167, 245);
+}
+.form button{
+    height: 2rem;
+    margin:1rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(0, 167, 245);
+    border: 1px solid rgb(0, 167, 245);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.form button:hover{
+    background-color: rgb(0, 144, 211);
+    border: 1px solid rgb(0, 144, 211);
+
+}
+
+.switchBtn{
+    background-color: grey !important;
+    border: 1px solid grey !important;
+}
+.switchBtn:hover{
+    background-color: rgb(110, 110, 110) !important;
+    border: 1px solid rgb(110, 110, 110) !important;
+}

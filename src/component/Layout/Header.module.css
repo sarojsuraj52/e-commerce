@@ -58,3 +58,14 @@
   right: 18px;
   color: white;
 }
+
+.loginBtn{
+  margin-right: 1rem;
+  padding: 0.2rem 0.5rem;
+  font-weight: bolder;
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 5px;
+}

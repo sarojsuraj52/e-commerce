@@ -1,0 +1,38 @@
+.productDetail{
+    display:flex;
+    margin: 6rem 2rem 10rem 2rem;
+}
+.productDetail h3{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.price{
+    font-size: 2.2rem;
+}
+.details{
+    max-width: 800px;
+    display:flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+}
+
+.review-heading{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: green;
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+}
+.ok{
+    width: 100rem;
+}

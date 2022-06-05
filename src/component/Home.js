@@ -9,7 +9,7 @@ function Home() {
         <span className={classes["play-btn"]}>▶</span>
       </Title>
       <div className={classes.tour}>
-        <h2>TOURS</h2>
+        <h2>Tours</h2>
         <div className={classes["tour-item"]}>
           <span className={classes["tour-date"]}>JUL 16</span>
           <span className={classes["tour-place"]}>DETROIT, MI</span>

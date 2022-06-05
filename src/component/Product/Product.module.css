@@ -11,6 +11,10 @@
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+.product h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
 .product_list {
   margin: 4rem 0;
