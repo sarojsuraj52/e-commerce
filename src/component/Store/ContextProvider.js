@@ -46,7 +46,7 @@ const ContextProvider = (props) => {
   const authctx = useContext(AuthContext);
   const [cartCount, setCartCount] = useState(0);
   const [data, setData] = useState([]);
-  
+
   let dummyAmount = 0;
   let email;
   if (authctx.email !== null) {
@@ -88,7 +88,6 @@ const ContextProvider = (props) => {
     }
 
     setItems(dummyItem);
-    // const email = authctx.email.replace(/[@.]/g,'')
     const cartitem = { ...item, quantity };
     await axios({
       method: "POST",
@@ -96,30 +95,23 @@ const ContextProvider = (props) => {
       data: cartitem,
     });
     getData();
-    amountAddition()
+    amountAddition();
   };
 
   const removeItemHandler = async (itemId) => {
     getData();
-    // amountSubtraction()
   };
 
   const dataArr = data.map((e) => {
     return e[1];
   });
-  
-  // console.log(data)
-  function amountAddition(){
+
+  function amountAddition() {
     dataArr.forEach((e) => {
       dummyAmount += e.price * e.quantity;
     });
   }
   amountAddition();
-  // function amountSubtraction(){
-  //   dataArr.forEach((e) => {
-  //     dummyAmount -= e.price * e.quantity;
-  //   });
-  // }
 
   const store = {
     items: items,
@@ -139,4 +131,3 @@ const ContextProvider = (props) => {
 };
 
 export default ContextProvider;
-
