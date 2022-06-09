@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import classes from "./Product.module.css";
 import Title from "../Title";
 import ProductItem from "./ProductItems/ProductItem";
@@ -24,4 +24,4 @@ function Product(props) {
   );
 }
 
-export default Product;
+export default React.memo(Product);

@@ -1,18 +1,21 @@
 import { Route,Switch,Redirect } from "react-router-dom";
-import { useContext } from "react";
-import "./App.css";
-import Cart from "./component/Cart/Cart";
-import Product from "./component/Product/Product";
+import React,{ useContext,Suspense } from "react";
 import { useState } from "react";
+import "./App.css";
 import ContextProvider from "./component/Store/ContextProvider";
-import About from "./component/About";
 import Header from "./component/Layout/Header";
 import Footer from "./component/Layout/Footer";
 import Home from "./component/Home";
-import Contact from "./component/Contact";
-import ProductDetails from "./component/Product/ProductDetails";
-import Login from "./component/Login";
 import AuthContext from "./component/Store/auth-context";
+
+const Login = React.lazy(()=>import('./component/Login'))
+const Contact = React.lazy(()=>import('./component/Contact'))
+const ProductDetails = React.lazy(()=>import('./component/Product/ProductDetails'))
+const About = React.lazy(()=>import('./component/About'))
+const Product = React.lazy(()=>import('./component/Product/Product'))
+const Cart = React.lazy(()=>import('./component/Cart/Cart'))
+
+
 
 function App() {
   const [CartShown, setCartShown] = useState(false);
@@ -27,6 +30,7 @@ function App() {
   return (
     <>
       <ContextProvider>
+        <Suspense fallback={<p className='loading'>Loading...</p>}>
         {CartShown && <Cart onHide={hideCart} />}
         <Header onShow={showCart}/>
         <Switch>
@@ -54,6 +58,7 @@ function App() {
         </Route>
         </Switch>
         <Footer />
+        </Suspense>
       </ContextProvider>
     </>
   );

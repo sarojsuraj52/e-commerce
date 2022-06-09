@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./Home.module.css";
 import Title from "./Title.js";
 
@@ -53,4 +54,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);

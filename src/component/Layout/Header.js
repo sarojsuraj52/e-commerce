@@ -1,6 +1,6 @@
 import { NavLink,Link } from "react-router-dom";
 import classes from "./Header.module.css";
-import { useContext} from "react";
+import React,{ useContext} from "react";
 import CartContextAPI from "../Store/CartContextAPI";
 import AuthContext from "../Store/auth-context";
 // import axios from "axios";
@@ -68,4 +68,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default React.memo(Header);

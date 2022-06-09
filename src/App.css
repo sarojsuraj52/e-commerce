@@ -5,3 +5,9 @@
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   font-family: "poppins";
 }
+.loading{
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  margin: 5rem auto;
+}

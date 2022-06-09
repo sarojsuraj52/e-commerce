@@ -1,5 +1,5 @@
 import classes from "./Login.module.css";
-import { useState,useRef,useContext } from "react";
+import React,{ useState,useRef,useContext } from "react";
 import { useHistory } from "react-router-dom";
 import AuthContext from "./Store/auth-context";
 
@@ -75,4 +75,4 @@ const Login = () => {
     </form>
 };
 
-export default Login;
+export default React.memo(Login);

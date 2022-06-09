@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./Footer.module.css";
 import youtube from "../../assets/youtube.png";
 import spotify from "../../assets/spotify.png";
@@ -16,4 +17,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default React.memo(Footer);

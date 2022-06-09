@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./About.module.css";
 import Title from "./Title";
 
@@ -59,4 +60,5 @@ function About() {
     </div>
   );
 }
-export default About;
+
+export default React.memo(About);

@@ -1,3 +1,4 @@
+import React from 'react'
 import classes from './Title.module.css'
 
 function Title(props){
@@ -8,4 +9,4 @@ function Title(props){
     </div>
 }
 
-export default Title
+export default React.memo(Title)
