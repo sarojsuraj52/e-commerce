@@ -14,19 +14,16 @@ function ProductDetails() {
   if (!product) {
     return (
       <p style={{ marginTop: "5rem", textAlign: "center" }}>
-        {" "}
+        {/* {" "} */}
         No Product Found
       </p>
     );
   }
 
-  //  product = ctx.productArr.find(product=> product.id === params.productId)
   return (
     <div className={classes.productDetail}>
       <div>
-        {/* <img src={product.imageUrl} alt={product.title } /> */}
-
-        <ReactImageMagnify 
+        <ReactImageMagnify
           {...{
             smallImage: {
               alt: product.title,
@@ -37,7 +34,6 @@ function ProductDetails() {
               src: product.imageUrl,
               width: 600,
               height: 600,
-              
             },
           }}
         />

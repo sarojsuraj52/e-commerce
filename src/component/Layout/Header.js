@@ -1,13 +1,33 @@
 import { NavLink,Link } from "react-router-dom";
 import classes from "./Header.module.css";
-import { useContext } from "react";
+import { useContext} from "react";
 import CartContextAPI from "../Store/CartContextAPI";
 import AuthContext from "../Store/auth-context";
+// import axios from "axios";
 
 function Header(props) {
   const ctx = useContext(CartContextAPI);
   const authctx = useContext(AuthContext)
-  const cartItem = ctx.items.length;
+  // let email
+  // if(authctx.email !=null){
+  //    email = authctx.email.replace(/[@.]/g,'')
+  // }
+  // const [cartCount,setCartCount] = useState(0)
+  
+  // const getData = useCallback (async()=>{
+  //   const res = await axios.get(`https://e-commerce-c0ab2-default-rtdb.firebaseio.com/cart${email}.json`)
+  //   const dummyCount = Object.entries(res.data).length
+  //   // console.log(dummyCount);
+  //   setCartCount(dummyCount)
+  // },[email])
+
+  // useEffect(()=>{
+  //   getData()
+  // },[getData])
+  
+
+
+
 
   const logoutHandler = ()=>{
     authctx.logout()
@@ -41,7 +61,7 @@ function Header(props) {
         {!authctx.isLoggedIn && <Link to='/login' className={classes.loginBtn}>Login</Link>}
         {authctx.isLoggedIn && <a href='#logout' className={classes.loginBtn} onClick={logoutHandler}>Logout</a>}
         {authctx.isLoggedIn && <a href="#cart" onClick={props.onShow}>
-          Cart <span>{cartItem}</span>
+          Cart <span>{ctx.cartCount}</span>
         </a>}
       </div>
     </div>

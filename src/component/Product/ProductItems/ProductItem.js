@@ -3,10 +3,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContextAPI from "../../Store/CartContextAPI";
 
-
 const ProductItem = (props) => {
   const ctx = useContext(CartContextAPI);
-  const addtToCartHandler = () => {
+
+  const addtToCartHandler = async() => {
     let quantity = 1;
     ctx.addItem(props, quantity);
   };

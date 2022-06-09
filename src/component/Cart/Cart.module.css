@@ -52,6 +52,11 @@
     margin: 15px;
     cursor: pointer;
 }
+.cancel:hover{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
 
 .cart-header{
     font-size: 1.2rem;

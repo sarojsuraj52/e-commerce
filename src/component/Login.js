@@ -39,7 +39,8 @@ const Login = () => {
 
             const data = await response.json()
             if(response.ok){
-                authctx.login(data.idToken)
+                
+                authctx.login(data.idToken,enteredEmail)
                 alert(isLogin?'Login Succesful':'Signup Successful')
                 history.replace('/products')
                 
