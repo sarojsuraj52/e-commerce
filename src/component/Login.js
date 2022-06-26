@@ -41,7 +41,7 @@ const Login = () => {
             if(response.ok){
                 
                 authctx.login(data.idToken,enteredEmail)
-                alert(isLogin?'Login Succesful':'Signup Successful')
+                alert(isLogin?'Login Successful':'Signup Successful')
                 history.replace('/products')
                 
             }

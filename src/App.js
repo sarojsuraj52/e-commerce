@@ -7,13 +7,13 @@ import Header from "./component/Layout/Header";
 import Footer from "./component/Layout/Footer";
 import Home from "./component/Home";
 import AuthContext from "./component/Store/auth-context";
+import Cart from "./component/Cart/Cart";
 
 const Login = React.lazy(()=>import('./component/Login'))
 const Contact = React.lazy(()=>import('./component/Contact'))
 const ProductDetails = React.lazy(()=>import('./component/Product/ProductDetails'))
 const About = React.lazy(()=>import('./component/About'))
 const Product = React.lazy(()=>import('./component/Product/Product'))
-const Cart = React.lazy(()=>import('./component/Cart/Cart'))
 
 
 
