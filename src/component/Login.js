@@ -39,11 +39,16 @@ const Login = () => {
 
             const data = await response.json()
             if(response.ok){
-                
-                authctx.login(data.idToken,enteredEmail)
+                if(isLogin){
+                    authctx.login(data.idToken,enteredEmail)
+                }
                 alert(isLogin?'Login Successful':'Signup Successful')
-                history.replace('/products')
-                
+                setIsLogin(true)
+                if(isLogin){
+                    history.replace('/products')
+                }
+                emailRef.current.value=''
+                passwordRef.current.value=''
             }
             else{
                 let errorMessage = "Something went Wrong"
